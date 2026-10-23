@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { gsap, useGSAP } from '../lib/motion'
-import { about } from '../data'
+import { about, profile } from '../data'
 import { Squiggle } from './Bits'
 import Wave from './Wave'
 
@@ -21,7 +21,7 @@ function PhotoStack() {
         const pos = order.indexOf(i)
         return (
           <figure key={src} data-i={i} className={`stack-card ${pos === 0 ? "is-top" : ""}`} style={{ zIndex: 10 - pos, '--pos': pos }}>
-            <img src={src} alt={`Lohitha, ${about.roles[i]}`} loading="lazy" />
+            <img src={src} alt={`${profile.name}, ${about.roles[i]}`} loading="lazy" />
             <figcaption><span className="role-kicker hand">I’m a</span><span className="role-name">{about.roles[i]}</span></figcaption>
           </figure>
         )

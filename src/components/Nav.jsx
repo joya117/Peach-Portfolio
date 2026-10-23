@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { gsap, goTo } from '../lib/motion'
 import { profile } from '../data'
 
-const links = [['About', '#about'], ['Work', '#work'], ['Journey', '#journey'], ['Toolbox', '#skills'], ['Milestones', '#milestones']]
+const links = [['About', '#about'], ['Work', '#work'], ['Journey', '#journey'], ['Toolbox', '#skills']]
 
 export default function Nav({ ready }) {
   const ref = useRef(null)

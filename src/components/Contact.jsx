@@ -24,25 +24,25 @@ export default function Contact() {
         <div className="ct-card">
           <div className="ct-copy">
             <span className="pill pill-light">Contact</span>
-            <h2 className="h2">Let’s be<br />friends!</h2>
-            <p>Hiring, collaborating or just want to say hi? My inbox is always open, and I usually reply within a day.</p>
+            <h2 className="h2">Let's<br />Connect!</h2>
+            <p>I'm actively looking for Full-Stack Developer roles. Feel free to reach out via email or connect with me on LinkedIn.</p>
             <div className="ct-mail">
               <a href={`mailto:${profile.email}`}>{profile.email}</a>
               <button onClick={copy}>{copied ? 'Copied ✓' : 'Copy'}</button>
             </div>
             <div className="ct-links">
-              <a className="btn btn-white" href={`mailto:${profile.email}?subject=Hi%20Lohitha!`}>Send an email ✉</a>
+              <a className="btn btn-white" href={`mailto:${profile.email}?subject=Hi%20${encodeURIComponent(profile.name)}!`}>Send an email ✉</a>
               <a className="btn btn-ghost" href={profile.github} target="_blank" rel="noreferrer">GitHub ↗</a>
               <a className="btn btn-ghost" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
             </div>
           </div>
           <div className="ct-media">
             <span className="ct-bubble hand">say hi! 👋</span>
-            <img className="ct-sticker" src={contactSticker} alt="Lohitha smiling" loading="lazy" />
+            <img className="ct-sticker" src={contactSticker} alt={`${profile.name} waving`} loading="lazy" />
           </div>
         </div>
         <footer className="foot">
-          <span>© {new Date().getFullYear()} {profile.full}</span>
+          <span>© {new Date().getFullYear()} {profile.name}</span>
           <button onClick={() => goTo('#top')}>Back to top ↑</button>
         </footer>
       </div>

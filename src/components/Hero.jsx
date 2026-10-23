@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import { gsap, useGSAP, goTo } from '../lib/motion'
-import { profile, heroCounts, lookFrames } from '../data'
-import LookAt from './LookAt'
+import { profile, heroCounts } from '../data'
 import { Squiggle, Arrow, Spark } from './Bits'
 
 export default function Hero({ ready }) {
@@ -28,7 +27,7 @@ export default function Hero({ ready }) {
     <section className="hero" id="top" ref={root}>
       <div className="hr-grid">
         <div className="hr-copy">
-          <p className="hr-hello hand">Hi there, I’m <span aria-hidden="true">👋</span></p>
+          <p className="hr-hello hand">Hi there, I'm <span aria-hidden="true">👋</span></p>
           <h1 className="hr-name">
             <span className="hr-name-text">{profile.name.split('').map((c, i) => <span className="ch-mask" key={i}><span className="ch">{c}</span></span>)}</span>
             <Squiggle />
@@ -40,18 +39,21 @@ export default function Hero({ ready }) {
             {heroCounts.map((c) => <li key={c.label}><b>{c.value}</b><span>{c.label}</span></li>)}
           </ul>
           <div className="hr-ctas">
-            <button className="btn btn-coral" onClick={() => goTo('#work')}>See my work <span>→</span></button>
-            {profile.resume
-              ? <a className="btn btn-line" href={profile.resume} target="_blank" rel="noreferrer">Résumé ↓</a>
-              : <button className="btn btn-line" onClick={() => goTo('#contact')}>Message me</button>}
+            <button className="btn btn-coral" onClick={() => goTo('#work')}>Explore Projects <span>→</span></button>
+            <button className="btn btn-line" onClick={() => goTo('#contact')}>Contact Me</button>
           </div>
         </div>
 
         <div className="hr-visual">
           <div className="hr-blob" />
-          <LookAt from={lookFrames.from} to={lookFrames.to} className="hr-person" label={profile.full} />
+          <img
+            className="hr-person"
+            src={profile.heroImage}
+            alt={profile.name + ' – ' + profile.role}
+            loading="eager"
+          />
           <div className="hr-note hand">
-            move your cursor,<br />I’ll look at it!
+            Full-Stack &amp; GSAP<br />enthusiast ✦
             <Arrow />
           </div>
         </div>
