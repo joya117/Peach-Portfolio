@@ -46,12 +46,6 @@ export default function Hero({ ready }) {
 
         <div className="hr-visual">
           <div className="hr-blob" />
-          <img
-            className="hr-person"
-            src={profile.heroImage}
-            alt={profile.name + ' – ' + profile.role}
-            loading="eager"
-          />
           <div className="hr-note hand">
             Full-Stack &amp; GSAP<br />enthusiast ✦
             <Arrow />
