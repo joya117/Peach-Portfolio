@@ -62,7 +62,7 @@ export const projects = [
     title: "CampusSync",
     tag: "Full-Stack Hub",
     visual: "gauge",
-    text: "A responsive full-stack platform built with React.js, Node.js, and MongoDB to streamline student scheduling, notes sharing, and campus event tracking with secure JWT authentication.",
+    text: "A responsive full-stack platform built with HTML5, vanilla JavaScript, CSS3, Node.js, and MongoDB to streamline student scheduling, notes sharing, and campus event tracking with secure JWT authentication.",
     tech: ["React.js", "Node.js", "MongoDB", "Express"],
     color: "#FFE5D9",
   },
