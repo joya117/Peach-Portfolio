@@ -55,6 +55,8 @@ export const about = {
 };
 
 /* visual: 'gauge' | 'heatmap' | 'outfit' (illustrated art), or add image: 'img/...' */
+
+/* visual: 'gauge' | 'heatmap' | 'outfit' | 'image' */
 export const projects = [
   {
     title: "CampusSync",
@@ -62,7 +64,6 @@ export const projects = [
     visual: "gauge",
     text: "A responsive full-stack platform built with React.js, Node.js, and MongoDB to streamline student scheduling, notes sharing, and campus event tracking with secure JWT authentication.",
     tech: ["React.js", "Node.js", "MongoDB", "Express"],
-    link: "https://github.com/",
     color: "#FFE5D9",
   },
   {
@@ -77,17 +78,15 @@ export const projects = [
       "Locomotive Scroll",
       "Styled Components",
     ],
-    link: "YOUR_GITHUB_REPOSITORY_LINK",
     color: "#F5EDE6",
   },
   {
-    title: "DevMatrix",
-    tag: "Developer Marketplace",
-    visual: "outfit",
-    text: "A full-stack CRUD platform allowing developers to share, rate, and preview reusable code blocks with advanced multi-filter search queries and backend persistence.",
-    tech: ["React.js", "Node.js", "MongoDB"],
-    link: "https://github.com/",
-    color: "#FFEDE5",
+    title: "Bank Transaction System",
+    tag: "Full-Stack Development",
+    visual: "gauge",
+    text: "A full-stack banking application designed to manage account balances, deposits, withdrawals, fund transfers, and transaction history using Node.js, Express.js, MongoDB, and Mongoose.",
+    tech: ["Node.js", "Express.js", "MongoDB", "Mongoose"],
+    color: "#E4E9FF",
   },
 ];
 
